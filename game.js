@@ -95,5 +95,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+
+    //this function controls flipping of your card
+    function flipCard() {
+        var cardId = this.getAttribute('data-id')
+        cardsChosen.push(cardArray[cardId].name)
+        cardsChosenId.push(cardId)
+        this.setAttribute('src', cardArray[cardId].img)
+        if (cardsChosen.length === 2) {
+            setTimeout(checkForMatch, 500)
+        }
+    }
+
+    createBoard()
+
     
 })
