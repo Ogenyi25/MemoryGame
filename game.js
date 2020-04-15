@@ -52,6 +52,9 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     ]
 
+    //this line refreshes the game with new card positions
+    cardArray.sort(() => 0.5 - Math.random())
+
 
     const grid = document.querySelector('.grid')
     const resultDisplay = document.querySelector('#result')
